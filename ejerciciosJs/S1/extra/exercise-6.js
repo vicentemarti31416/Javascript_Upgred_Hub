@@ -1,3 +1,5 @@
+const goodProducts = [];
+const badProducts = [];
 const products = [
     {name: 'Gorra de rodilla', sellCount: 10},
     {name: 'Pantalón de pana', sellCount: 302},
@@ -5,7 +7,4 @@ const products = [
     {name: 'Inpar de zapatos', sellCount: 6}
 ];
 
-let totalVentas = 0;
-products.forEach((product) => totalVentas += product.sellCount);
-
-console.log('El total de ventas es -> ' + totalVentas);
+// El enunciado tiene un error, el ejercicio no tiene el array 'movies'
