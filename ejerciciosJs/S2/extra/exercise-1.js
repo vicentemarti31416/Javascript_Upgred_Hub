@@ -10,7 +10,6 @@ let uniques = [];
 
 for(let movie of movies) {
     categories = categories.concat(movie.categories);
-    // categories = categories.flatMap((category) => category);
 };
 
 categories.forEach((category) => {

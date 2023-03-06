@@ -7,4 +7,4 @@ const products = [
     'AC/DC Camiseta'
 ]
 
-products.forEach((product) => product.includes('Camiseta') ? console.log(product) : '');
+products.forEach((product) => {if(product.includes('Camiseta')) console.log(product)});

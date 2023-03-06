@@ -7,6 +7,6 @@ let swap = (array, first, last) => {
     array.splice(last, 1, primero);
 };
 
-swap(nombres, 0, 3);
+swap(nombres, 1, 3);
 
 console.log(nombres)

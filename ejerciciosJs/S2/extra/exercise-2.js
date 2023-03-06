@@ -29,25 +29,21 @@ const users = [
     },
 ]
 
-let favorites = [];
+let volumes = [];
 
 for(let user of users) {
     for(let key in user) {
-        if(key.includes('favoritesSounds')) favorites.push(user[key]);
-    }
-}
-
-let volumes = [];
-
-for(let sound of favorites) {
-    for(let key in sound) {
-        for(let prop in sound[key]) if(prop.includes('volume')) volumes.push(sound[key][prop])
+        if(key.includes('favoritesSounds')) {
+            for(let aux in user[key]) {
+                for(let prop in user[key][aux]) if(prop.includes('volume')) volumes.push(user[key][aux][prop])
+            }
+        }
     }
 }
 
 let totalVolumes = 0;
 volumes.forEach((volume) => totalVolumes += volume);
 
-console.log(totalVolumes / volumes.length);
+console.log(`La media de todos los volúmenes es ${totalVolumes / volumes.length}`);
 
 

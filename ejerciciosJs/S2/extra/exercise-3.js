@@ -29,18 +29,16 @@ const users = [
     },
 ]
 
-let favorites = [];
+let sounds = [];
 
 for(let user of users) {
     for(let key in user) {
-        if(key.includes('favoritesSounds')) favorites.push(user[key]);
+        if(key.includes('favoritesSounds')) {
+            for(let favorite in user[key]) {
+                sounds.push(favorite);
+            }
+        }
     }
-}
-
-let sounds = [];
-
-for(let favorite of favorites) {
-    for(let key in favorite) sounds.push(key);
 }
 
 const stats = {};

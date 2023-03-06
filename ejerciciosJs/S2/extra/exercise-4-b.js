@@ -6,10 +6,10 @@ let findArrayIndex = (array, text) => {
     }
 }
 
-let deleteElement = (array, index) => { 
+let removeItem = (array, index) => { 
     if(index !== undefined) array.splice(index, 1);    
 };
 
-deleteElement(textos, findArrayIndex(textos, 'Ajolote'));
+removeItem(textos, findArrayIndex(textos, 'Mosquito'));
 
 console.log(`array textos -> ${textos}`);
