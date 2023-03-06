@@ -44,4 +44,7 @@ for(let user of users) {
 const stats = {};
 sounds.forEach((sound) => (stats[sound] = stats[sound] + 1 || 1));
 
+const stats2 = {...stats}
+
 console.log(stats)
+console.log(stats2)

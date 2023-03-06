@@ -35,7 +35,9 @@ for(let user of users) {
     for(let key in user) {
         if(key.includes('favoritesSounds')) {
             for(let aux in user[key]) {
-                for(let prop in user[key][aux]) if(prop.includes('volume')) volumes.push(user[key][aux][prop])
+                for(let prop in user[key][aux]) {
+                    if(prop.includes('volume')) volumes.push(user[key][aux][prop]);
+                }
             }
         }
     }
