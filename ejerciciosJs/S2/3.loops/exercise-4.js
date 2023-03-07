@@ -6,6 +6,6 @@ let toys = [
     {id: 41, name: 'El gato felix'}
 ]
 
-for(const [index, toy] of toys.entries()) toys = toys.filter((toy) => !toy.name.includes('gato'));
+for(const toy of toys) toys = toys.filter((toy) => !toy.name.includes('gato'));
 
 toys.forEach((toy) => console.log(toy));
