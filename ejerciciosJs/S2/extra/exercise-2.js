@@ -31,12 +31,12 @@ const users = [
 
 let volumes = [];
 
-for(let user of users) {
-    for(let key in user) {
-        if(key.includes('favoritesSounds')) {
-            for(let aux in user[key]) {
-                for(let prop in user[key][aux]) {
-                    if(prop.includes('volume')) volumes.push(user[key][aux][prop]);
+for(let user of users) { // Obenemos cada user del objeto users (el nombre user es inventado)
+    for(let key in user) { // Recorremos el objeto user extreyendo cada key en cada iteración (name, favoriteSound)
+        if(key.includes('favoritesSounds')) { // Si la key de ese bucle incluye es favoriteSound iteramos ese objeto
+            for(let aux in user[key]) { //user[key] se refiere al objeto anterior, es como decir user['favoriteSound'], lo que haremos es recorrer sus atributos
+                for(let prop in user[key][aux]) { // user[key][aux] representa el objeto favoriteSount y prop sus atributos (format, volume)
+                    if(prop.includes('volume')) volumes.push(user[key][aux][prop]); // Si el atributo de ese bucle es volume, incluísmos su valor en el array volumes
                 }
             }
         }
@@ -44,8 +44,8 @@ for(let user of users) {
 }
 
 let totalVolumes = 0;
-volumes.forEach((volume) => totalVolumes += volume);
+volumes.forEach((volume) => totalVolumes += volume); // Vamos sumando todos los volumenes 
 
-console.log(`La media de todos los volúmenes es ${totalVolumes / volumes.length}`);
+console.log(`La media de todos los volúmenes es ${totalVolumes / volumes.length}`); // Sacamos la media dividiendo el total por lo cantidad de volúmenes
 
 
