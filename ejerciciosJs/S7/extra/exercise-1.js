@@ -11,4 +11,4 @@ const total = videogames
 .filter((game) => game.genders.includes('RPG'))
 .reduce((acc, game) => game.score + acc, 0);
 
-console.log(total / videogames.length);
+console.log(total / videogames.length); 
